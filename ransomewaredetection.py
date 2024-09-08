@@ -49,7 +49,7 @@ class MyHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
     # Specify the directory that i want to monitor
-    path = "D:\pyhtonpyhtonproject"
+    path = "path of folder or directory as u want to monitor"
 
     event_handler = MyHandler()
     observer = Observer()
