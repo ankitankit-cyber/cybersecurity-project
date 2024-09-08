@@ -74,7 +74,7 @@ if __name__ == "__main__":
 # This function is for backup file incase if files are effected
 
 def backup_file(file_path):
-    backup_directory = 'D:\pyhtonpyhtonproject\backuppath'
+    backup_directory = 'backup folder path'
     if not os.path.exists(backup_directory):
         os.makedirs(backup_directory)
 
@@ -89,8 +89,8 @@ def backup_file(file_path):
 # This function is for alert email
 
 def sen_email_alert(file_path, recipient=None):
-    sender = "ankitsingh11162@gmail.com"
-    recipeint = "ankitpal11122@gmail.com"
+    sender = "here sender email address"
+    recipeint = "here recipent email address"
 
     subject = "crtical Alert: Ransomware Activity Detected"
     body = f"Supsicious ransomware-like behavior deteced for the file: {file_path}"
@@ -101,7 +101,7 @@ def sen_email_alert(file_path, recipient=None):
     msg["To"] = recipeint
 
     try:
-        with smtplib.SMTP("ankitsingh11162@gmail.com", 587) as server:
+        with smtplib.SMTP("sender email", 587) as server:
             server.starttls()  # Secure connection
             server.login(sender, "your_email_password")
             server.sendmail(sender, [recipient], msg.as_string())
